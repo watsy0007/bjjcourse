@@ -116,7 +116,9 @@ defmodule BjjcourseWeb.BilibiliLive do
   end
 
   defp video_url(t, p) do
-    "//player.bilibili.com/player.html?aid=620007341&bvid=BV1U84y197Qd&cid=1310214612&page=#{p}&t=#{t}&autoplay=0"
+    # "//player.bilibili.com/player.html?aid=620007341&bvid=BV1U84y197Qd&cid=1310214612&page=#{p}&t=#{t}&autoplay=0"
+
+    "//bilibili.com/video/BV1U84y197Qd/?share_source=copy_web&vd_source=aa68c4c9ecabf72cf8c0c638c5fef8a9&t=#{t}&p=#{p}&autoplay=0"
   end
 
   def handle_event("location_start", %{"value" => value, "volume" => p} = params, socket) do
